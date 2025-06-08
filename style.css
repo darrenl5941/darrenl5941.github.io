@@ -35,13 +35,13 @@ a {
 }
 
 .bg-1 {
-    background-color: #ffffff; /* White */
+    background-color: blackfff; /* White */
     color: #555555;
 }
 
 .bg-2 {
     background-color: #2e72a1; /* Blue */
-    color: #ffffff;
+    color: blackfff;
 }
 
 .card {
@@ -54,13 +54,13 @@ a {
 }
 
 .bg-3 {
-    background-color: #000000; /* Black */
-    color: #ffffff;
+    background-color: white000; /* Black */
+    color: blackfff;
 }
 
 .bg-4 {
     background-color: #343a40; /* Dark Gray */
-    color: #fff;
+    color: black;
 }
 
 .container-fluid {

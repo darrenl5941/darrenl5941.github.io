@@ -44,49 +44,49 @@
     <div class="container-fluid bg-1">
         <div class="container">
 
-            <h1 class="margin text-center">CYOA Project</h1>
+            <h1 class="margin text-center">SEP 10 Freedom Project</h1>
 
             <h4>Context</h4>
-            <p>In this project I had to make <b>a story where you get to choose what to do</b>. I had to make multiple <i>files</i> in <i>sub directories</i> that had <i>links</i> that would bring you to other files to make it work.</p>
+            <p>In this project we got to choose a <b>topic of our choice</b>. We would have to find the current technology, both software and hardware, in that topic and come up with possible future technology in our topic as well. We would then have to make a website to show and talk about the current and future technology we came up with in our topic.</p>
 
             <br>
 
             <h4>Content</h4>
-            <p>I made a story where the goal was to <i>prank Mr. Mueller</i>. You would make multiple choices which would lead you to fail at your goal or to different ways of you pranking Mr. Mueller. Using <b>HTML</b> I made links from one file to the next. Here is an exmple of the links used in the first file, <code class="language-X">door.html</code>:</p>
+            <p>For this project I made a website about <b>the Stock Market</b>. My website would show multiple peices of software and hardware in the stock market such as different <i>stock market apps</i>, <i>monitors</i>, <i>quantum devices</i>, and <i>feild-programmable gate arrays</i>. In my website I used everything I learned from my software engineering course (HTML, CSS, and Bootstrap) to make my website. I also used a tool in coding that I learned on my own, <b>jQuery</b>, to make my website more unique from others doing the project. I used jQuery to make parts of my website alternate what information it would show by clicking on it. Here is an example of the code I used to do this:</p>
 
             <pre><code class="language-X">
-                &lt;a&gt; href = "computer/at-computer.html">Walk to your seat&lt;/a&gt;
+                $(".monitor-2").hide();
+                $(".monitor-3").hide();
 
-                &lt;a&gt; href = "exit-classroom/hall-pass.html">Ask for the hall pass&lt;/a&gt;
+                $("body").on("click", "#monitors", function(){
+
+                    if ($(".monitor-1").is(":visible")) {
+
+                        $(".monitor-1").hide();
+                        $(".monitor-2").fadeIn();
+
+                    } else if ($(".monitor-2").is(":visible")) {
+
+                        $(".monitor-2").hide();
+                        $(".monitor-3").fadeIn();
+
+                    } else if ($(".monitor-3").is(":visible")) {
+
+                        $(".monitor-3").hide();
+                        $(".monitor-1").fadeIn();
+
+                    }
+
+                });
             </code></pre>
 
-            <br>
-
             <h4>Challenges</h4>
-            <p>A challenge I had was when I was trying to make links from my <i>endings folder</i> back to my <code class="language-X">door.html</code> file. The problem was that the link i made didn't work because I forgot to make it go back up to a parent directory first. Here was my origional link:
-            <br><br>
-            <code class="language-X">&lt;a&gt; href = "door.html">Restart&lt;/a&gt;</code>
-            <br><br>
-            To fix it I had to add <code class="language-X">../</code>, which would tell the link to first go out of the <i>endings folder</i> so it would then be in the paren directory of <code class="language-X">door.html</code>. Here is the fixed link:
-            <br><br>
-            <code class="language-X">&lt;a&gt; href = "../door.html">Restart&lt;/a&gt;</code>
-            </p>
+
+            <a href="https://github.com/darrenl5941/sep10-freedom-project">Link to the project</a>
 
             <br>
 
-            <h4>Takeaways</h4>
-            <p>A takeaway from this challenge is that you need to be very direct in the path you make your links take to get to their destination like with my link to the <code class="language-X">door.html</code> file. I first need to make the link go it it's parent directory of the file that I want to go to.</p>
-
-            <br>
-
-            <h4>Next Steps</h4>
-            <p>My next step for this project would be to add more of a background or images. This is because as the state that I have left this project at it is just an <i>MVP (Minimum Viable Product)</i> and it is just text with links and a white background.</p>
-
-            <a href="https://github.com/darrenl5941/prank-mr.mueller">Link to the project</a>
-
-            <br>
-
-            <a href="https://darrenl5941.github.io/prank-mr.mueller/door.html">Link to the preview</a>
+            <a href="https://darrenl5941.github.io/sep10-freedom-project/">Link to the preview</a>
 
             <br><br>
 
@@ -95,7 +95,8 @@
             <!--EXAMPLE OF GITHUB LINK-->
             <!--<a href="http://github.com/yourUserName/yourRepoName">Github</a><br>-->
 
-            <img src="../img/cyoa.png" class="img-fluid project-img">
+            <img src="../img/sep10-freedom-project.png" class="img-fluid project-img">
+
 
             <div class="row">
 
@@ -137,7 +138,6 @@
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
     <script src="../script.js"></script>
-
 </body>
 
 </html>
