@@ -82,6 +82,39 @@
 
             <h4>Challenges</h4>
 
+            One of the challenges I had was some of my images being too big or too small compared to the amount of text. On small screens the image would be very small compared to the text and on large screens the image would be very big compared to the text. To fix this I added more <code class="language-X">col</code> classes so I could make the amount of space that the image and text take up change in proportion to the screen. The code I used looked like this:
+
+            <pre><code class="language-X">
+                // Image div
+                &lt;div class="col-sm-5 col-md-4 col-lg-3"&gt;
+                    . . .
+                &lt;/div&gt;
+                // Text div
+                &lt;div class="col-sm-7 col-md-8 col-lg-9"&gt;
+                   . . .
+                &lt;/div&gt;
+            </code></pre>
+
+            Another challenge that I had was getting my swapping parts with jQuery to work properly. I wanted the part that was changing to fade out and then the next one to fade in, but it would end up doing both at the same time so both parts would be showing at once for a few seconds. I first tried to fix this problem by trying to figure out how to make the code wait for the fading out to finish before the fading in started, but I didn't know what _javascript_ I would need to do that. Because of this I instead found another solution which didn't do what I origionally wantewd to do, but fixed the problem. I made it so that the part that was dissapearing instantly vanished so that you wouldn't see both at the same time, which had a similar affect to what I wanted it to look like. Here is the origonal and fixed code:
+
+            <pre><code class="language-X">
+                // origional code
+                $(".monitor-1").fadeOut();
+                $(".monitor-2").fadeIn();
+
+                // fixed code
+                $(".monitor-1").hide();
+                $(".monitor-2").fadeIn();
+            </code></pre>
+
+            <h4>Takeaways</h4>
+
+            <p>One of the takeaways I have is that sometimes it is okay to find an alternative if you are struggling to fix a bug, like when I changed the <code class="language-X">.fadeOut()</code> to <code class="language-X">.hide()</code>. By doing this you can save time which can be valuable if you have a lot of other things that you need to work on in a short amount of time and get a solution that works close to what you need.</p>
+
+            <h4>Next Steps</h4>
+
+            If I had more time to work on this project my next steps would be to find the actual fix to my origional code for swapping parts of my website so the animation looked smoother, and to use jQuery more like to make the background change when you scroll to a certain section and in other parts of my website because I didn't get to use as much jQuery compared to the amount that I wanted to use it.
+
             <a href="https://github.com/darrenl5941/sep10-freedom-project">Link to the project</a>
 
             <br>
